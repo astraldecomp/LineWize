@@ -1,9 +1,9 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+  "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "Connect for Chrome - Education",
   "version": "2.1.4",
-  
+
   "manifest_version": 2,
   "description": "Connect for Chrome - Education provides visibility into student internet access in the classroom.",
   "browser_action": {
@@ -14,9 +14,7 @@
     "192": "/background/events/message_scripts/icon-192.png",
     "512": "/background/events/message_scripts/icon-512.png"
   },
-  "host_permissions": [
-    "*://*.linewize.net"
-  ],
+  "host_permissions": ["*://*.linewize.net"],
   "permissions": [
     "<all_urls>",
     "tabs",
@@ -70,22 +68,17 @@
     "/background/events/message_scripts/beta.svg",
     "/background/events/message_scripts/closePendo.svg"
   ],
-  "content_scripts": [{
-    "all_frames": true,
-    "js": [
-      "background/filtering/content.js"
-    ],
-    "matches": [
-      "*://*/*"
-    ],
-    "run_at": "document_start"
-  }
- ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["background/filtering/content.js"],
+      "matches": ["*://*/*"],
+      "run_at": "document_start"
+    }
+  ],
   "oauth2": {
     "client_id": "474789183549-2jbl8gn6gik3pho11dlcdcllb22ab4vm.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/userinfo.email"
-    ]
+    "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

@@ -5,11 +5,11 @@
  *
  * @return {boolean} If the flag is undefined, or false, the flag is set and returns true.
  */
-(function() {
-    if (window.hasLoadedLinewizeMessageCSS === true) {
-        return false;
-    } else {
-        window.hasLoadedLinewizeMessageCSS = true;
-        return true;
-    }
+(function () {
+  if (window.hasLoadedLinewizeMessageCSS === true) {
+    return false;
+  } else {
+    window.hasLoadedLinewizeMessageCSS = true;
+    return true;
+  }
 })();
